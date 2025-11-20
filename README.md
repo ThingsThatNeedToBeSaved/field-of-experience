@@ -11,15 +11,15 @@ This repository contains the full multi-chapter project in HTML format, designed
 
 The project aims to:
 
-describe the structural movements underlying experience
+- describe the structural movements underlying experience
 
-make these dynamics observable rather than theoretical
+- make these dynamics observable rather than theoretical
 
-provide a coherent framework without rigid metaphysics
+- provide a coherent framework without rigid metaphysics
 
-support clarity, perceptual literacy, and introspective precision
+- support clarity, perceptual literacy, and introspective precision
 
-allow future contributors or “seekers” to evolve the structure further
+- allow future contributors or “seekers” to evolve the structure further
 
 The Field is meant to remain open, adaptable, and alive.
 
@@ -28,17 +28,17 @@ The Field is meant to remain open, adaptable, and alive.
 
 All chapters share:
 
-a warm, minimal aesthetic
+- a warm, minimal aesthetic
 
-gentle color gradients
+- gentle color gradients
 
-spacious typography
+- spacious typography
 
-mobile-responsive layout
+- mobile-responsive layout
 
-friendly panel and card structures
+- friendly panel and card structures
 
-unified navigation and identity
+- unified navigation and identity
 
 The CSS lives in assets/style.css and is purposely simple to modify.
 
