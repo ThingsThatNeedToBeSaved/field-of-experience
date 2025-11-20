@@ -6,6 +6,7 @@ The Field of Experience is a conceptual and experiential architecture that maps 
 
 This repository contains the full multi-chapter project in HTML format, designed for clarity, readability, and long-term evolution.
 
+--
 
 🌱 Purpose
 
@@ -23,6 +24,7 @@ The project aims to:
 
 The Field is meant to remain open, adaptable, and alive.
 
+--
 
 🎨 Design Philosophy
 
@@ -42,6 +44,7 @@ All chapters share:
 
 The CSS lives in assets/style.css and is purposely simple to modify.
 
+--
 
 🔧 How to Contribute
 
@@ -70,6 +73,7 @@ Before contributing, please:
 
 Pull requests are welcome.
 
+--
 
 ✨ Vision
 
