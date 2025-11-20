@@ -1,0 +1,132 @@
+/* Field of Experience — core stylesheet
+   Design: clean, warm, friendly, responsive
+   No icons/symbols. Subtle color accents only. */
+
+:root{
+  --bg: #fbfaf8; /* warm off-white */
+  --surface: #ffffff; /* paper */
+  --muted: #f3efe9; /* subtle panel */
+  --text: #222029; /* primary text */
+  --muted-text: #6b6a6e; /* secondary */
+  --accent: #7c5eaa; /* warm purple accent */
+  --accent-2: #e07a5f; /* soft coral */
+  --success: #4aa96c; /* green */
+  --radius: 12px;
+  --max-width: 980px;
+  --gap: 1.25rem;
+  --transition: 240ms ease;
+  --elev-xs: 0 1px 2px rgba(16,16,18,0.04);
+  --elev-sm: 0 6px 18px rgba(16,16,18,0.06);
+}
+
+/* Base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: linear-gradient(180deg,var(--bg),#fff 60%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+  padding:0 1rem;
+}
+
+a{color:var(--accent); text-decoration:underline; text-decoration-thickness:1px}
+a:focus{outline:3px solid color-mix(in srgb, var(--accent) 12%, transparent)}
+
+.container{
+  max-width:var(--max-width);
+  margin:1.25rem auto;
+}
+
+.header, header.site-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:var(--gap);
+  padding:1rem 0.5rem;
+}
+.brand{display:flex;align-items:center;gap:.75rem}
+.brand .logo{
+  width:44px;height:44px;border-radius:10px;background:linear-gradient(180deg,var(--accent), color-mix(in srgb,var(--accent) 70%, #000 10%));
+  display:grid;place-items:center;color:#fff;font-weight:700;font-size:1.05rem;
+}
+.brand .title{font-weight:600;color:var(--text)}
+
+.main-nav{display:flex;gap:.6rem;align-items:center}
+.main-nav a{padding:.5rem .65rem;border-radius:8px;color:var(--muted-text);font-weight:600;text-decoration:none}
+.main-nav a.active, .main-nav a:hover{background:var(--muted);color:var(--text)}
+
+/* Article */
+.article{background:transparent;padding:1rem 0}
+.article h1{font-size:1.6rem;margin:.25rem 0 .5rem}
+.lead{color:var(--muted-text);margin-bottom:1.25rem;font-size:1.03rem}
+
+.essay-section{margin:1.25rem 0;padding:1rem;background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.9));border-radius:10px}
+.essay-section h2{margin:0 0 .5rem;font-size:1.08rem}
+.essay-section h3{margin:.65rem 0 .4rem;color:var(--accent-2)}
+
+p{margin:.5rem 0}
+
+/* Cards and summary boxes */
+.layer-card, .summary-box{
+  background:var(--surface);
+  padding:1rem;
+  border-radius:var(--radius);
+  box-shadow:var(--elev-xs);
+  border:1px solid rgba(18,18,20,0.03);
+  margin:1rem 0;
+}
+.summary-box{border-left:4px solid var(--accent);background:linear-gradient(180deg,var(--muted) 0%, var(--surface) 30%)}
+
+/* Buttons */
+.btn{display:inline-block;padding:.5rem .8rem;border-radius:10px;border:none;background:var(--accent);color:#fff;font-weight:600;cursor:pointer;transition:all var(--transition)}
+.btn.secondary{background:transparent;border:1px solid rgba(0,0,0,0.06);color:var(--text)}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--elev-sm)}
+
+/* Lists */
+ul{margin:0.5rem 0 1rem 1.1rem}
+
+/* Responsive layout for main content */
+main.container{display:block}
+@media (min-width:980px){
+  main.container{display:grid;grid-template-columns: 1fr 320px;gap:2rem;align-items:start}
+  .article{grid-column:1 / 2}
+  /* right column (toc / extras) */
+  .side{
+    grid-column:2/3;position:sticky;top:1.5rem;height:calc(100vh - 3rem);overflow:auto;padding-right:0.5rem
+  }
+}
+
+/* Table of contents */
+.toc{background:var(--surface);padding:1rem;border-radius:10px;border:1px solid rgba(0,0,0,0.04)}
+.toc h4{margin:0 0 .5rem}
+.toc a{display:block;padding:.25rem 0;color:var(--muted-text)}
+
+/* Footer */
+.site-footer{margin:2rem auto;padding:1.5rem 0;color:var(--muted-text);text-align:center}
+
+/* Small utilities */
+.kv{display:flex;gap:.5rem;align-items:center}
+.muted{color:var(--muted-text)}
+.center{display:flex;justify-content:center;align-items:center}
+
+/* Accessibility adjustments */
+:focus{outline:3px solid color-mix(in srgb, var(--accent) 12%, transparent);outline-offset:2px}
+
+/* Smaller devices */
+@media (max-width:640px){
+  .brand .logo{width:38px;height:38px}
+  .main-nav{overflow:auto;gap:.5rem;padding-bottom:.5rem}
+  .essay-section{padding:.8rem}
+  .summary-box{padding:.8rem}
+}
+
+/* Gentle print rules */
+@media print{
+  body{background:#fff;color:#000}
+  .brand .logo{display:none}
+  .main-nav{display:none}
+}
