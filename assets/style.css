@@ -130,3 +130,10 @@ main.container{display:block}
   .brand .logo{display:none}
   .main-nav{display:none}
 }
+
+.index-category {
+    margin-top: 2.5rem;
+    font-size: 1.15rem;
+    color: var(--accent);
+    font-weight: 600;
+}
