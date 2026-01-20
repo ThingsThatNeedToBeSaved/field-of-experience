@@ -137,3 +137,21 @@ main.container{display:block}
     color: var(--accent);
     font-weight: 600;
 }
+
+.field-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+.field-navigation a {
+    text-decoration: none;
+}
+
+.field-navigation a:hover {
+    text-decoration: underline;
+}
